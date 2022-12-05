@@ -7,14 +7,14 @@ Yohann THEPAUT (ythepaut) <contact@ythepaut.com>
 """
 
 import argparse
-from solutions import day1, day2, day3
+from solutions import day1, day2, day3, day4
 
 
 def get_inputs(path: str) -> list[str]:
     """Gets inputs from files and return them as a list of strings."""
-    file = open(path, "r", encoding="utf8")
-    lines = file.readlines()
-    file.close()
+    file_ = open(path, "r", encoding="utf8")
+    lines = file_.readlines()
+    file_.close()
     return lines
 
 
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     inputs = get_inputs(args.input)
-    days = [day1, day2, day3]
+    days = [day1, day2, day3, day4]
     assert (0 < args.day <= len(days)), f"Day must be between 1 and {len(days)}"
 
     solutions = days[args.day - 1].solve(inputs)
