@@ -47,5 +47,5 @@ def part2(rucksacks: list[str]) -> int:
 
 
 def solve(inputs: list[str]) -> tuple[int, int]:
-    rounds = preprocess_inputs(inputs)
-    return part1(rounds), part2(rounds)
+    rucksacks = preprocess_inputs(inputs)
+    return part1(rucksacks), part2(rucksacks)
