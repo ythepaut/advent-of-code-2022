@@ -69,11 +69,7 @@ def construct_tree(commands: list[str]) -> Directory:
 
 
 def print_tree(node: Node, indentation: str = "") -> None:
-    print(f"""
-        {indentation}
-        {node.name}\t
-        ({'dir' if isinstance(node, Directory) else 'file'}, {get_node_size(node)})
-    """)
+    print(f"""{indentation}{node.name}\t({'dir' if isinstance(node, Directory) else 'file'}, {get_node_size(node)})""")
     if isinstance(node, Directory):
         for child in node.children:
             print_tree(child, indentation + "  ")
