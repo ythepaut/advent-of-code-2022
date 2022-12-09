@@ -51,7 +51,6 @@ def part2(pairs: list[tuple[SectionRange, SectionRange]]) -> int:
     count = 0
     for pair in pairs:
         if range_a_partially_overlaps_b(pair[0], pair[1]) or range_a_partially_overlaps_b(pair[1], pair[0]):
-            print(pair[0], pair[1])
             count += 1
     return count
 
